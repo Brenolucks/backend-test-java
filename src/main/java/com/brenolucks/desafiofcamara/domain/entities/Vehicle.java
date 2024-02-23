@@ -23,4 +23,6 @@ public class Vehicle implements Serializable {
     private String plate;
     @NotBlank(message = "The field Type is mandatory.")
     private String type;
+    @OneToOne(mappedBy = "vehicle")
+    private Company company;
 }

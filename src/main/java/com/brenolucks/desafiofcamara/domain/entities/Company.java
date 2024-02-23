@@ -25,4 +25,7 @@ public class Company implements Serializable {
     private int amountVacancyMotorcycle;
     @NotBlank(message = "The field Amount Vacancy Car is mandatory.")
     private int amountVacancyCar;
+    @OneToOne
+    @JoinColumn(name = "vehicle_id", referencedColumnName = "id")
+    private Vehicle vehicle;
 }
